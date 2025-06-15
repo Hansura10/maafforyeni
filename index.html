@@ -6,12 +6,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
+  <!-- Halaman Pembuka -->
+  <div id="intro" class="intro-screen">
+    <div class="intro-message">
+      <p>Semoga kamu mengerti dan paham,<br>
+      kamu pernah kirim GDocs untuk ngasih aku pernyataan darimu.<br>
+      Sekarang aku ngasih web ini untuk memberikan pernyataanku.</p>
+      <button onclick="startTransition()">Maaf Ya, Semoga Kamu Mengerti</button>
+    </div>
+  </div>
+
+  <!-- Hitungan Mundur -->
+  <div id="countdown" class="countdown-screen hidden">
+    <h1>Maaf...</h1>
+    <p>Hitungan mundur kejutan dalam</p>
+    <h2 id="count">5</h2>
+  </div>
+
+  <!-- Halaman Utama -->
+  <div id="main" class="card hidden">
     <h1 class="wow-text">🎂 Selamat Ulang Tahun, Yeni! 🎉</h1>
     <img src="assets/foto.jpg" alt="Foto kalian" class="foto main-photo">
     <p class="wow-text delay-1">Hari ini adalah hari yang spesial karena kamu hadir di dunia ini.</p>
-    <p class="wow-text delay-2">Terima kasih telah menemani perjalanku hampir 2 tahun ini. 💖</p>
-    <p class="wow-text delay-2">Semoga Diberikan Sehat, Rejekinya Makin Lancar, Apa yang Diinginkan Segera Tercapai! 🤲</p>
+    <p class="wow-text delay-2">Terima kasih telah menjadi cahaya dalam hidupku. 💖</p>
     <h2 class="wow-text delay-3">Dari Hamdan untuk Yeni</h2>
 
     <video class="wow-text delay-4" width="320" controls>
