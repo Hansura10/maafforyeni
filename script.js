@@ -31,12 +31,14 @@ function startTransition() {
       document.getElementById("countdown").classList.add("hidden");
       document.getElementById("main").classList.remove("hidden");
 
-      // Buat dan putar musik BARU hanya saat halaman utama muncul
-      const music = new Audio('assets/musik.mp3');
-      music.loop = true;
-      music.play().catch((e) => {
-        console.warn("Musik gagal diputar:", e);
-      });
+      // BUAT audio dan play hanya setelah semua muncul
+      setTimeout(() => {
+        const music = new Audio("assets/musik.mp3");
+        music.loop = true;
+        music.play().catch((e) => {
+          console.warn("Musik gagal diputar:", e);
+        });
+      }, 300); // kasih delay sedikit biar transisi terasa
     } else {
       counter.innerText = count;
     }
