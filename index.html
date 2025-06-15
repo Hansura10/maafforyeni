@@ -1,46 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Permohonan Maafku 🙏</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Ulang Tahun Yeni 🎉</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Halaman Pembuka -->
-  <div id="intro" class="intro-screen">
-    <div class="intro-message">
-      <p>SEMOGA KAMU PAHAM DAN MENGERTI, 🙏<br>
-      Dimulai saat kamu ngirim GDocs berisi pernyataan darimu.<br>
-      Sekarang aku ngasih WEB ini untuk memberikan pernyataanku yang udah lama kutahan. 🙏</p>
-      <button onclick="startTransition()">Maaf Ya, Semoga Kamu Mengerti</button>
-    </div>
+  <div id="intro" class="section">
+    <p class="intro-text">Semoga kamu mengerti dan paham 💌<br>Kamu pernah kirim GDocs untuk ngasih aku pernyataan darimu.<br>Sekarang aku ngasih web ini untuk memberikan pernyataanku ✨</p>
+    <button onclick="startTransition()" class="btn">Maaf Ya, Semoga Kamu Mengerti 😔</button>
   </div>
 
-  <!-- Hitungan Mundur -->
-  <div id="countdown" class="countdown-screen hidden">
-    <h1>Maaf...</h1>
-    <p>Semoga Kita tetap Baik" Ya 🙏</p>
-    <h2 id="count">5</h2>
+  <div id="countdown" class="section hidden">
+    <p class="count-text">Hitung Mundur Kejutan Dimulai 🎁</p>
+    <h1 id="count">5</h1>
   </div>
 
-  <!-- Halaman Utama -->
-  <div id="main" class="card hidden">
-    <h1 class="wow-text">🎂 Selamat Ulang Tahun, Yeni! 🎉</h1>
-    <img src="assets/foto.jpg" alt="Foto kalian" class="foto main-photo">
-    <p class="wow-text delay-1">Hari ini adalah hari yang spesial karena kamu hadir di dunia ini.</p>
-    <p class="wow-text delay-2">Terima kasih telah menemaniku selama hampir 2 tahun ini.</p>
-    <p class="wow-text delay-2">Semoga panjang umur, diberikan kesehatan, dilancarkan rejekinya, dan apa yang diinginkan segera tercapai! 🤲</p>
-    <h2 class="wow-text delay-3">By Hamdan</h2>
-
-    <video class="wow-text delay-4" width="320" controls>
+  <div id="main" class="section hidden">
+    <h1 class="main-title">Selamat Ulang Tahun Yeni 🎂</h1>
+    <p class="main-message">Aku berharap semua kebahagiaan datang padamu 💖</p>
+    <video class="video" controls>
       <source src="assets/video.mp4" type="video/mp4">
-      Video tidak didukung browser-mu.
+      Video tidak dapat diputar.
     </video>
-
-    <div class="photo-gallery">
-      <div class="hover-photo" style="background-image: url('assets/foto1.jpg');"></div>
-      <div class="hover-photo" style="background-image: url('assets/foto2.jpg');"></div>
-      <div class="hover-photo" style="background-image: url('assets/foto3.jpg');"></div>
+    <div class="gallery">
+      <div class="photo hidden-photo" style="background-image: url('assets/photo1.jpg')"></div>
+      <div class="photo hidden-photo" style="background-image: url('assets/photo2.jpg')"></div>
+      <div class="photo hidden-photo" style="background-image: url('assets/photo3.jpg')"></div>
     </div>
   </div>
 
