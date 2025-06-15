@@ -1,36 +1,77 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
   text-align: center;
   padding: 50px;
   color: #333;
+  animation: bgFade 10s infinite alternate;
+}
+
+@keyframes bgFade {
+  0% { background-position: left; }
+  100% { background-position: right; }
 }
 
 .card {
   background: white;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  max-width: 700px;
   margin: auto;
+  animation: zoomIn 1s ease-out;
 }
 
-.foto {
-  width: 200px;
-  border-radius: 15px;
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.main-photo {
+  width: 220px;
+  border-radius: 20px;
   margin: 20px 0;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-.fade-in {
+.wow-text {
   opacity: 0;
-  animation: fadeIn 2s ease-in-out forwards;
+  transform: translateY(40px);
+  animation: fadeSlideUp 1s ease-out forwards;
 }
 
-.fade-in:nth-child(2) { animation-delay: 1s; }
-.fade-in:nth-child(3) { animation-delay: 2s; }
-.fade-in:nth-child(4) { animation-delay: 3s; }
+.wow-text.delay-1 { animation-delay: 0.5s; }
+.wow-text.delay-2 { animation-delay: 1s; }
+.wow-text.delay-3 { animation-delay: 1.5s; }
+.wow-text.delay-4 { animation-delay: 2s; }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.photo-gallery {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hover-photo {
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  filter: brightness(0);
+  transition: filter 0.5s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hover-photo:hover {
+  filter: brightness(1);
 }
