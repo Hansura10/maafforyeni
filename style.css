@@ -1,0 +1,36 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  text-align: center;
+  padding: 50px;
+  color: #333;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  max-width: 600px;
+  margin: auto;
+}
+
+.foto {
+  width: 200px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.fade-in:nth-child(2) { animation-delay: 1s; }
+.fade-in:nth-child(3) { animation-delay: 2s; }
+.fade-in:nth-child(4) { animation-delay: 3s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
