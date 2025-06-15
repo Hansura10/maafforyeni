@@ -17,15 +17,13 @@ function startTransition() {
   }, 1000);
 }
 
-const music = new Audio('assets/musik.mp3');
-music.loop = true;
-
 function startTransition() {
   document.getElementById("intro").classList.add("hidden");
   document.getElementById("countdown").classList.remove("hidden");
 
   let count = 5;
   const counter = document.getElementById("count");
+
   const interval = setInterval(() => {
     count--;
     if (count <= 0) {
@@ -33,7 +31,9 @@ function startTransition() {
       document.getElementById("countdown").classList.add("hidden");
       document.getElementById("main").classList.remove("hidden");
 
-      // Mulai musik hanya di halaman utama
+      // Buat dan putar musik BARU hanya saat halaman utama muncul
+      const music = new Audio('assets/musik.mp3');
+      music.loop = true;
       music.play().catch((e) => {
         console.warn("Musik gagal diputar:", e);
       });
