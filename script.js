@@ -1,28 +1,28 @@
+const introBtn = document.getElementById("introBtn");
+const intro = document.getElementById("intro");
+const countdown = document.getElementById("countdown");
+const countdownNumber = document.getElementById("countdown-number");
+const mainContent = document.getElementById("main-content");
+const music = document.getElementById("bg-music");
 
-function startTransition() {
-  document.getElementById("intro").classList.add("hidden");
-  document.getElementById("countdown").classList.remove("hidden");
+introBtn.addEventListener("click", () => {
+  intro.classList.add("hidden");
+  countdown.classList.remove("hidden");
 
   let count = 5;
-  const counter = document.getElementById("count");
-
   const interval = setInterval(() => {
     count--;
-    if (count <= 0) {
+    countdownNumber.textContent = count;
+    if (count === 0) {
       clearInterval(interval);
-      document.getElementById("countdown").classList.add("hidden");
-      document.getElementById("main").classList.remove("hidden");
+      countdown.classList.add("hidden");
+      mainContent.classList.remove("hidden");
 
-      // Mainkan musik setelah halaman utama tampil
       setTimeout(() => {
-        const music = new Audio("assets/musik.mp3");
-        music.loop = true;
         music.play().catch((e) => {
           console.warn("Musik gagal diputar:", e);
         });
       }, 300);
-    } else {
-      counter.innerText = count;
     }
   }, 1000);
-}
+});

@@ -1,34 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Selamat Ulang Tahun Yeni 🎉</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pernyataanku untukmu</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="intro" class="section">
-    <p class="intro-text">Semoga kamu mengerti dan paham 💌<br>Kamu pernah kirim GDocs untuk ngasih aku pernyataan darimu.<br>Sekarang aku ngasih web ini untuk memberikan pernyataanku ✨</p>
-    <button onclick="startTransition()" class="btn">Maaf Ya, Semoga Kamu Mengerti 😔</button>
+  <div id="intro" class="centered">
+    <p class="intro-text">
+      Aku nggak tahu ini bakal bikin kamu sedih atau marah, tapi aku harus jujur...<br><br>
+      <strong>SEMOGA KAMU PAHAM DAN MENGERTI,</strong><br>
+      Dimulai saat kamu ngirim GDocs berisi pernyataan darimu.<br>
+      Sekarang aku ngasih WEB ini untuk memberikan pernyataanku yang udah lama kutahan. 🙏
+    </p>
+    <button id="introBtn">Maaf ya... Semoga kamu mengerti</button>
   </div>
 
-  <div id="countdown" class="section hidden">
-    <p class="count-text">Hitung Mundur Kejutan Dimulai 🎁</p>
-    <h1 id="count">5</h1>
+  <div id="countdown" class="centered hidden">
+    <p id="countdown-number">5</p>
   </div>
 
-  <div id="main" class="section hidden">
-    <h1 class="main-title">Selamat Ulang Tahun Yeni 🎂</h1>
-    <p class="main-message">Aku berharap semua kebahagiaan datang padamu 💖</p>
-    <video class="video" controls>
-      <source src="assets/video.mp4" type="video/mp4">
-      Video tidak dapat diputar.
+  <div id="main-content" class="hidden">
+    <audio id="bg-music" src="assets/musik.mp3" loop></audio>
+    <h1>🎉 Selamat Ulang Tahun Yeni! 🎂</h1>
+    <img src="assets/gambar-utama.jpg" alt="Gambar Utama" class="main-image" />
+
+    <video controls class="video">
+      <source src="assets/video.mp4" type="video/mp4" />
+      Maaf, browser kamu tidak mendukung video.
     </video>
-    <div class="gallery">
-      <div class="photo hidden-photo" style="background-image: url('assets/photo1.jpg')"></div>
-      <div class="photo hidden-photo" style="background-image: url('assets/photo2.jpg')"></div>
-      <div class="photo hidden-photo" style="background-image: url('assets/photo3.jpg')"></div>
+
+    <div class="photo-gallery">
+      <div class="photo" style="background-image: url('assets/photo1.jpg');"></div>
+      <div class="photo" style="background-image: url('assets/photo2.jpg');"></div>
+      <div class="photo" style="background-image: url('assets/photo3.jpg');"></div>
     </div>
   </div>
 
