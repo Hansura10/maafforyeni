@@ -41,13 +41,22 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.intro-button {
+  background-color: #000;
+  color: white;
+}
+
+.intro-button:hover {
+  background-color: #333;
+}
+
 button {
   margin-top: 20px;
   padding: 12px 24px;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
-  background-color: #000;  /* Warna hitam */
+  background-color: #ff8ba7;  /* Warna hitam */
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
