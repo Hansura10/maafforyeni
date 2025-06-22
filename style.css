@@ -67,29 +67,29 @@ button:hover {
 }
 
 .main-image {
-  max-width: 90%;
+  width: 90%;
+  max-width: 700px;
+  max-height: 500px;
+  height: auto;
   border-radius: 20px;
-  margin: 20px 0;
+  margin: 20px auto;
   box-shadow: 0 0 20px rgba(255, 100, 150, 0.5);
+  object-fit: contain;
 }
 
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
+/* Carousel image */
 .carousel-img {
-  width: 250px;
-  height: 250px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 400px;
+  height: auto;
   border-radius: 16px;
   object-fit: cover;
   border: 4px solid #fff;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
 
+/* Tombol carousel */
 .carousel-btn {
   background: none;
   border: none;
@@ -97,6 +97,17 @@ button:hover {
   color: #fff;
   cursor: pointer;
   text-shadow: 1px 1px 3px #ff6495;
+}
+
+/* Penyesuaian untuk layar besar */
+@media (min-width: 768px) {
+  .main-image {
+    width: 70%;
+  }
+
+  .carousel-img {
+    width: 70%;
+  }
 }
 
 .rainbow-text {
