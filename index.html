@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="intro" class="centered">
+  <div id="intro" class="centered serious-bg">
     <p class="intro-text">
       Aku nggak tahu ini bakal bikin kamu sedih atau marah, tapi aku harus jujur...<br><br>
       <strong>SEMOGA KAMU PAHAM DAN MENGERTI,</strong><br>
@@ -17,24 +17,20 @@
     <button id="introBtn">Maaf ya... Semoga kamu mengerti</button>
   </div>
 
-  <div id="countdown" class="centered hidden">
+  <div id="countdown" class="centered hidden serious-bg">
     <p id="countdown-number">5</p>
   </div>
 
-  <div id="main-content" class="hidden">
+  <div id="main-content" class="hidden cheerful-bg">
     <audio id="bg-music" src="assets/musik.mp3" loop></audio>
-    <h1>🎉 Selamat Ulang Tahun Yeni! 🎂</h1>
+    <h1 class="rainbow-text">🎉 Selamat Ulang Tahun Yeni! 🎂</h1>
+
     <img src="assets/gambar-utama.jpg" alt="Gambar Utama" class="main-image" />
 
-    <video controls class="video">
-      <source src="assets/video.mp4" type="video/mp4" />
-      Maaf, browser kamu tidak mendukung video.
-    </video>
-
-    <div class="photo-gallery">
-      <div class="photo" style="background-image: url('assets/photo1.jpg');"></div>
-      <div class="photo" style="background-image: url('assets/photo2.jpg');"></div>
-      <div class="photo" style="background-image: url('assets/photo3.jpg');"></div>
+    <div class="carousel">
+      <button class="carousel-btn" onclick="prevSlide()">&#10094;</button>
+      <img id="carousel-image" src="assets/carousel1.jpg" alt="Slide" class="carousel-img">
+      <button class="carousel-btn" onclick="nextSlide()">&#10095;</button>
     </div>
   </div>
 
