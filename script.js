@@ -1,3 +1,4 @@
+// Elemen-elemen utama
 const introBtn = document.getElementById("introBtn");
 const intro = document.getElementById("intro");
 const countdown = document.getElementById("countdown");
@@ -5,34 +6,51 @@ const countdownNumber = document.getElementById("countdown-number");
 const mainContent = document.getElementById("main-content");
 const music = document.getElementById("bg-music");
 
-let carouselImages = [
-  "assets/carousel1.jpg",
-  "assets/carousel2.jpg",
-  "assets/carousel3.jpg"
-];
-let currentSlide = 0;
-const carouselImg = document.getElementById("carousel-image");
+// Carousel (versi geser)
+const track = document.querySelector(".carousel-track");
+const images = document.querySelectorAll(".carousel-img");
+let currentIndex = 0;
 
-function showSlide(index) {
-  if (index < 0) index = carouselImages.length - 1;
-  if (index >= carouselImages.length) index = 0;
-  currentSlide = index;
-  carouselImg.src = carouselImages[currentSlide];
+// Geser ke slide saat ini
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
+// Tombol panah (desktop)
 function nextSlide() {
-  showSlide(currentSlide + 1);
+  currentIndex = (currentIndex + 1) % images.length;
+  updateCarousel();
 }
 
 function prevSlide() {
-  showSlide(currentSlide - 1);
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateCarousel();
 }
 
+// Swipe gesture (mobile)
+let startX = 0;
+
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  if (endX < startX - 50) {
+    nextSlide();
+  } else if (endX > startX + 50) {
+    prevSlide();
+  }
+});
+
+// Transisi dari intro ke countdown
 introBtn.addEventListener("click", () => {
   intro.classList.add("hidden");
   countdown.classList.remove("hidden");
 
   let count = 5;
+  countdownNumber.textContent = count;
+
   const interval = setInterval(() => {
     count--;
     countdownNumber.textContent = count;
@@ -40,7 +58,7 @@ introBtn.addEventListener("click", () => {
       clearInterval(interval);
       countdown.classList.add("hidden");
       mainContent.classList.remove("hidden");
-      showSlide(0);
+      updateCarousel(); // tampilkan slide pertama
       setTimeout(() => {
         music.play().catch((e) => {
           console.warn("Musik gagal diputar:", e);
