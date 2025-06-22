@@ -41,6 +41,17 @@ body {
   font-family: Arial, sans-serif;
 }
 
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Tombol intro hitam */
 .intro-button {
   background-color: #000;
   color: white;
@@ -50,20 +61,20 @@ body {
   background-color: #333;
 }
 
-button {
-  margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #ff8ba7;  /* Warna hitam */
+/* Tombol carousel pink */
+.carousel-btn {
+  background-color: #ff8ba7;
   color: white;
+  font-size: 1.8rem;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #333;  /* Abu gelap saat hover */
+.carousel-btn:hover {
+  background-color: #ff6482;
 }
 
 #countdown-number {
@@ -86,7 +97,15 @@ button:hover {
   object-fit: contain;
 }
 
-/* Carousel image */
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
 .carousel-img {
   width: 90%;
   max-width: 500px;
@@ -98,17 +117,13 @@ button:hover {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
 
-/* Tombol carousel */
-.carousel-btn {
-  background: none;
-  border: none;
+.rainbow-text {
   font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  text-shadow: 1px 1px 3px #ff6495;
+  background: linear-gradient(to right, #ff416c, #ff4b2b, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Penyesuaian untuk layar besar */
 @media (min-width: 768px) {
   .main-image {
     width: 70%;
@@ -117,11 +132,4 @@ button:hover {
   .carousel-img {
     width: 70%;
   }
-}
-
-.rainbow-text {
-  font-size: 2rem;
-  background: linear-gradient(to right, #ff416c, #ff4b2b, #ff6ec4, #7873f5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
