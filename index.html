@@ -32,12 +32,18 @@
     <h2 class="wow-text delay-3">By Hamdan</h2>
 
 
-    <div class="carousel">
-      <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
-      <img id="carousel-image" src="assets/carousel1.jpg" alt="Slide" class="carousel-img">
-      <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
-    </div>
+   <div class="carousel">
+  <div class="carousel-track">
+    <img src="assets/carousel1.jpg" alt="Slide 1" class="carousel-img" />
+    <img src="assets/carousel2.jpg" alt="Slide 2" class="carousel-img" />
+    <img src="assets/carousel3.jpg" alt="Slide 3" class="carousel-img" />
   </div>
+  <div class="carousel-buttons">
+    <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
 
   <script src="script.js"></script>
 </body>
